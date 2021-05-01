@@ -4,8 +4,8 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
+import Home from "./components/homepage/Home";
+import About from "./components/aboutpage/About";
 import Contact from "./components/Contact";
 import News from "./components/News";
 import Resources from "./components/Resources";
