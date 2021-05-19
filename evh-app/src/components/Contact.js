@@ -1,43 +1,68 @@
 import React, { Component } from "react";
-import { useForm, ValidationError } from '@formspree/react';
+import axios from "axios";
 class Contact extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+      status: "Submit"
+    };   
+  }
+  //this posts to local and not the database yett...
+  handleSubmit(event) {
+    event.preventDefault();  
+    this.setState({ status: "Sending" });  
+    axios({
+      method: "POST",
+      url: "http://localhost:5000/contact",
+      data: this.state,
+    }).then((response) => {
+      if (response.data.status === "sent") {
+        alert("Message Sent");
+        this.setState({ name: "", email: "", message: "", status: "Submit" });
+      } else if (response.data.status === "failed") {
+        alert("Message Failed");
+      }
+    });
+  }
+
   render() {
-    
+    let buttonText = this.state.status;
     return (
-      <div>
-        <h2>GOT QUESTIONS?</h2>
-        <p> Cras facilisis urna ornare ex volutpat, et
-        convallis erat elementum. Ut aliquam, ipsum vitae
-        gravida suscipit, metus dui bibendum <a href="https://github.com/sunshinejen/evh/projects/1"> Project </a>.
-        </p>
-        {/* <form onSubmit={handleSubmit}>
-      <label htmlFor="email">
-        Email Address
-      </label>
-      <input
-        id="email"
-        type="email" 
-        name="email"
-      />
-      <ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
-      <textarea
-        id="message"
-        name="message"
-      />
-      <ValidationError 
-        prefix="Message" 
-        field="message"
-        errors={state.errors}
-      />
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
-    </form> */}
-      </div>
+      <form onSubmit={this.handleSubmit.bind(this)} method="POST">
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            value={this.state.name}
+            //onChange={this.handleChange.bind(this)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={this.state.email}
+            //onChange={this.handleChange.bind(this)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            value={this.state.message}
+            //onChange={this.handleChange.bind(this)}
+            required
+          />
+        </div>
+        <button type="submit">{buttonText}</button>
+      </form>
     );
   }
 }
