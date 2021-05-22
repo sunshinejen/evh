@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-class Contact extends Component {
+class PrescriptionForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -33,11 +33,21 @@ class Contact extends Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)} method="POST">
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name"> Pet Name:</label>
           <input
             type="text"
             id="name"
             value={this.state.name}
+            //onChange={this.handleChange.bind(this)}
+            required
+          />
+            </div>
+            <div>
+          <label htmlFor="phone">Phone:</label>
+          <input
+            type="phone"
+            id="phone"
+            value={this.state.email}
             //onChange={this.handleChange.bind(this)}
             required
           />
@@ -51,9 +61,20 @@ class Contact extends Component {
             //onChange={this.handleChange.bind(this)}
             required
           />
-        </div>
+            </div>
+            
+            <div>
+            <label htmlFor="medication">Medication:
+          <select value={this.state.value}>
+            <option value="med1">Medication 1</option>
+            <option value="med2">Medication 2</option>
+            <option value="med3">Medication 3</option>
+            <option value="med4">Medication 4</option>
+          </select>
+            </label>
+            </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Notes:</label>
           <textarea
             id="message"
             value={this.state.message}
@@ -67,4 +88,4 @@ class Contact extends Component {
   }
 }
  
-export default Contact;
+export default PrescriptionForm;

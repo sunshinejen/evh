@@ -28,7 +28,7 @@ class Main extends Component {
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
-            <Route path="/contact" component={Contact}/>
+            <Route path="/contact" component={Contact} />
             <Route path="/news" component={News}/>
             <Route path="/resources" component={Resources}/>
             <Route path="/services" component={Services}/>
