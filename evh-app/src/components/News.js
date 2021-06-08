@@ -1,14 +1,22 @@
 import React, { Component } from "react";
- 
+import InstagramEmbed from 'react-instagram-embed' 
 class News extends Component {
   render() {
     return (
       <div>
         <h2>News</h2>
-        <p> Cras facilisis urna ornare ex volutpat, et
-        convallis erat elementum. Ut aliquam, ipsum vitae
-        gravida suscipit, metus dui bibendum <a href="https://github.com/sunshinejen/evh/projects/1"> Project </a>.
-        </p>
+        <InstagramEmbed
+  url='https://instagr.am/p/Zw9o4/'
+  maxWidth={500}
+  hideCaption={true}
+  containerTagName='div'
+  protocol=''
+  injectScript
+  onLoading={() => {}}
+  onSuccess={() => {}}
+  onAfterRender={() => {}}
+  onFailure={() => {}}
+/>
       </div>
     );
   }
