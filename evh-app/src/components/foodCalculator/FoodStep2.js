@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 const Step2 = (props) => {
   const { data, handleChange, next, back } = props;
   return (

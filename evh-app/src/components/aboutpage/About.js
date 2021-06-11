@@ -4,7 +4,7 @@ import {Card, Button,CardColumns} from 'react-bootstrap';
 class About extends Component {
   render() {
     return (
-      <div>
+      <div class="container-fluid">
         <h2>Our Team</h2>
         <p> Cras facilisis urna ornare ex volutpat, et
         convallis erat elementum. Ut aliquam, ipsum vitae

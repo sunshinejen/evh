@@ -1,51 +1,59 @@
-import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter,MDBBtn, MDBIcon} from "mdbreact";
+import React, { Component } from "react";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBBtn, MDBIcon } from "mdbreact";
+import { SocialIcon } from 'react-social-icons';
+import { Popover } from '@varld/popover'
+//import ClearIcon from '@material-ui/icons/Clear';
 
 const FooterPage = () => {
   return (
     <MDBFooter color="blue" className="font-small pt-4 mt-4">
+
       <MDBContainer fluid className="text-center text-md-left">
-        <MDBRow>
-          <MDBCol md="6">
-            <h5 className="title">Footer Content</h5>
-            <p>
-              Here you can use rows and columns here to organize your footer
-              content.
-            </p>
-          </MDBCol>
-          <MDBCol md="6">
-            <h5 className="title">Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Contact Us</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Order Prescriptions</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Meet the Team</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Services</a>
-              </li>
-            </ul>
-          </MDBCol>
-        </MDBRow>
+        
+        <Popover popover={({ visible, open, close }) => {
+          return (
+            <div>
+              <ul>
+                  <li>Monday</li>
+                  <li>Tuesday</li>
+                  <li>Wednesda</li>
+                  <li>Thursday</li>
+                  <li>Friday</li>
+                  <li>Saturday</li>
+              </ul>
+
+              <button onClick={() => close()}>
+          </button>
+          
+            </div>
+          )
+        }}>
+
+          <button>I have a popover</button>
+        </Popover>
       </MDBContainer>
-      <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid>
-                  &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
-                  <MDBBtn tag="a" size="lg" floating gradient="purple">
-        <MDBIcon icon="bolt" />
-      </MDBBtn>
-      <MDBBtn tag="a" floating gradient="peach">
-        <MDBIcon icon="leaf" />
-      </MDBBtn>
-      <MDBBtn tag="a" size="sm" floating gradient="blue">
-        <MDBIcon icon="star" />
-      </MDBBtn>
+      <div class="container-fluid" className="footer-copyright text-center py-3">
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol>Eastlake Veterinary Hospital</MDBCol>
+          </MDBRow>
+          <MDBRow>
+          <MDBCol> | HOURS |CONTACT | LOCATION </MDBCol>
+          </MDBRow>
+          </MDBContainer>
+      <MDBContainer>
+        <MDBRow center>
+          <MDBCol size="1" ><SocialIcon url="https://twitter.com/jaketrent" bgColor="#ff5a01" /></MDBCol>
+          <MDBCol size="1" ><SocialIcon url="https://www.instagram.com/eastlakevetpets/" /></MDBCol>
+          <MDBCol size="1"  ><SocialIcon url="mailto:eastlakevet@comcast.net" network="email" /></MDBCol>
+          <MDBCol size="1" ><SocialIcon url="https://www.facebook.com/eastlake.veterinary.hospital/" /></MDBCol>
+          </MDBRow>
         </MDBContainer>
-      </div>
+        <MDBContainer> <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a></MDBContainer>
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: Eastlake Veterinary Hospital
+        </MDBContainer>
+        </div>
     </MDBFooter>
   );
 }

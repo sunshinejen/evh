@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 const Submit = (props) => {
   const { data } = props;
   const listItems = Object.entries(data).map(([key, value]) => (

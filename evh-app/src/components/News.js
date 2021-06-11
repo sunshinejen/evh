@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import InstagramEmbed from 'react-instagram-embed' 
+
 class News extends Component {
   render() {
     return (
@@ -16,8 +17,9 @@ class News extends Component {
   onSuccess={() => {}}
   onAfterRender={() => {}}
   onFailure={() => {}}
-/>
+        />
       </div>
+      
     );
   }
 }

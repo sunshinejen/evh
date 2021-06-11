@@ -5,7 +5,7 @@ import PrescriptionForm from "./login/PrescriptionForm";
 class Resources extends Component {
   render() {
     return (
-      <div>
+      <div class="container-fluid">
         <h2>Resources</h2>
         <p> Cras facilisis urna ornare ex volutpat, et
         convallis erat elementum. Ut aliquam, ipsum vitae
