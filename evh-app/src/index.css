@@ -30,4 +30,19 @@ body {
   }
   .content li {
     margin-bottom: 10px;
+
   }
+  /*buttons*/
+ 
+  a.btn.btn-primary, button.btn.btn-primary {
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+ 
+  i.fa.fa-prescription-bottle-alt.fa-8x.buttonMeds,i.fa.fa-stethoscope.fa-8x.buttonSteth, i.fa.fa-map.fa-8x.buttonMap, i.fa.fa-mobile-alt.fa-8x.buttonPhone{
+    color: #00bfa5;
+  }
+
+.icons {
+  background-color: #e0f2f1;
+}

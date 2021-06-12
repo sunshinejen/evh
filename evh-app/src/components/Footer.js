@@ -43,7 +43,7 @@ const FooterPage = () => {
           </MDBContainer>
       <MDBContainer>
         <MDBRow center>
-          <MDBCol size="1" ><SocialIcon url="https://twitter.com/jaketrent" bgColor="#ff5a01" /></MDBCol>
+          <MDBCol size="1" ><SocialIcon url="https://twitter.com/jaketrent"/></MDBCol>
           <MDBCol size="1" ><SocialIcon url="https://www.instagram.com/eastlakevetpets/" /></MDBCol>
           <MDBCol size="1"  ><SocialIcon url="mailto:eastlakevet@comcast.net" network="email" /></MDBCol>
           <MDBCol size="1" ><SocialIcon url="https://www.facebook.com/eastlake.veterinary.hospital/" /></MDBCol>
