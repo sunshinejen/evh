@@ -17,7 +17,7 @@ class Home extends Component {
           <AnimalsSeen />
         <div class="icons">
           <h1>We strive to help you provide the best care to your pets</h1>
-          <h4>Make an appointment, get directions, request a prescription refill, or give us a call</h4>
+          <small class="text-muted">Make an appointment, get directions, request a prescription refill, or give us a call</small>
       <Icons/>
         </div>
         </>
