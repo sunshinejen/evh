@@ -42,7 +42,13 @@ body {
   i.fa.fa-prescription-bottle-alt.fa-8x.buttonMeds,i.fa.fa-stethoscope.fa-8x.buttonSteth, i.fa.fa-map.fa-8x.buttonMap, i.fa.fa-mobile-alt.fa-8x.buttonPhone{
     color: #00bfa5;
   }
+  i.fa.fa-cat.fa-8x.cat, i.fa.fa-dog.fa-8x.dog{
+    color: #004d40;
+  }
 
 .icons {
   background-color: #e0f2f1;
+}
+.animals{
+  background-color: #b2dfdb;
 }
