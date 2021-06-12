@@ -10,10 +10,12 @@ import Contact from "./components/Contact";
 import News from "./components/News";
 import Resources from "./components/Resources";
 import Services from "./components/Services";
+import FooterPage from "../src/components/Footer";
  
 class Main extends Component {
   render() {
     return (
+      <>
       <HashRouter>
         <div>
           <h1>EVH</h1>
@@ -33,8 +35,13 @@ class Main extends Component {
             <Route path="/resources" component={Resources}/>
             <Route path="/services" component={Services}/>
           </div>
+          <FooterPage/>
         </div>
       </HashRouter>
+      <div>
+
+      </div>
+      </>
     );
   }
 }

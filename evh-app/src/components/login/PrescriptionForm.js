@@ -31,6 +31,7 @@ class PrescriptionForm extends Component {
   render() {
     let buttonText = this.state.status;
     return (
+      <div class="container-fluid">
       <form onSubmit={this.handleSubmit.bind(this)} method="POST">
         <div>
           <label htmlFor="name"> Pet Name:</label>
@@ -83,7 +84,8 @@ class PrescriptionForm extends Component {
           />
         </div>
         <button type="submit">{buttonText}</button>
-      </form>
+        </form>
+        </div>
     );
   }
 }
